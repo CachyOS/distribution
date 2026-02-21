@@ -1,0 +1,33 @@
+name: Enhancement Request
+description: Suggest an idea or improvement for CachyOS that is not a package or version update.
+title: '[Enhancement]: '
+labels: [enhancement, new]
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Problem / Motivation
+      description: Describe the problem you are trying to solve or the motivation behind this request.
+      placeholder: e.g. It is frustrating that… / It would improve the workflow when…
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the improvement or feature you would like to see implemented.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative approaches or workarounds?
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context, mockups, references, or links that may be helpful.

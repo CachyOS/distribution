@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: CachyOS Forum
+    url: https://discuss.cachyos.org
+    about: Ask questions and get help from the community on the CachyOS forum.
+  - name: CachyOS Wiki
+    url: https://wiki.cachyos.org
+    about: Check the wiki for documentation, guides, and known solutions.
+  - name: CachyOS Discord
+    url: https://discord.gg/cachyos-862292009423470592
+    about: Chat with the community and developers in real time.

@@ -1,0 +1,56 @@
+name: Package Update
+description: Flag a package as out of date by requesting an update to a newer version.
+title: '[Package Update]: '
+labels: [new, package-update]
+body:
+  - type: input
+    id: package-name
+    attributes:
+      label: Package Name
+      placeholder: e.g. cachyos-settings
+    validations:
+      required: true
+
+  - type: dropdown
+    id: repository
+    attributes:
+      label: Repository
+      options:
+        - cachyos
+        - cachyos-extra
+        - cachyos-v3
+        - cachyos-znver4
+    validations:
+      required: true
+
+  - type: input
+    id: current-version
+    attributes:
+      label: Current Version
+      description: Run `pacman -Q <package>` to get the installed version.
+      placeholder: e.g. 1.0.0-1
+    validations:
+      required: true
+
+  - type: input
+    id: requested-version
+    attributes:
+      label: Requested Version
+      placeholder: e.g. 1.2.3-1
+    validations:
+      required: true
+
+  - type: input
+    id: upstream-url
+    attributes:
+      label: Upstream Release URL
+      description: Link to the release, tag, or changelog.
+      placeholder: e.g. https://github.com/owner/repo/releases/tag/v1.2.3
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any special considerations such as breaking changes, new dependencies, config migrations, or build instructions the packager should be aware of.

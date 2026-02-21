@@ -1,0 +1,99 @@
+name: Bug Report
+description: Please describe the problem. Include your hardware information, steps to reproduce, and the expected outcome.
+title: '[Bug]: '
+labels: [bug, new]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing a bug, please make sure your system is **fully up to date** (`sudo pacman -Syu`) and check the [CachyOS Wiki](https://wiki.cachyos.org) and [Forum](https://discuss.cachyos.org) to see if your issue is already documented or discussed.
+
+  - type: input
+    id: kernel
+    attributes:
+      label: Kernel
+      description: Run `uname -r` to get your kernel version.
+      placeholder: e.g. 6.13.3-2-cachyos
+    validations:
+      required: true
+
+  - type: dropdown
+    id: desktop
+    attributes:
+      label: Desktop Environment / Window Manager
+      options:
+        - KDE Plasma
+        - GNOME
+        - Hyprland
+        - Sway
+        - i3
+        - XFCE
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: cpu
+    attributes:
+      label: CPU
+      placeholder: e.g. AMD Ryzen 9 7950X, Intel Core i9-14900K
+    validations:
+      required: true
+
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU / Driver
+      placeholder: e.g. AMD RX 7900 XTX / amdgpu, NVIDIA RTX 4090 / nvidia 570.xx
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: input
+    id: logs
+    attributes:
+      label: Logs / Error Messages
+      description: "Run `sudo cachyos-bugreport.sh` (current session) or `journalctl -b -1 | paste-cachyos` (previous session) and paste the generated link here."
+      placeholder: e.g. https://paste.cachyos.org/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Screenshots, links to related issues, or any other helpful information.
